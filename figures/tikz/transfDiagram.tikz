@@ -1,0 +1,36 @@
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+  \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1.5,xscale=1.5]
+  %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+  %Shape: Rectangle [id:dp8088308900717263] 
+  %\draw   (31,101) -- (70.33,101) -- (70.33,141) -- (31,141) -- cycle ;
+  \draw   (30,100) -- (70,100) -- (70,140) -- (30,140) -- cycle ;
+  %Right Arrow [id:dp5637298668216818]
+  %\draw   (99.33,122.25) -- (87.13,122.25) -- (87.13,124) -- (79,120.5) -- (87.13,117) -- (87.13,118.75) -- (99.33,118.75) -- cycle ;
+  \draw   (99.33,122.25) -- (87.13,122.25) -- (87.13,124) -- (79,120.5) -- (87.13,117) -- (87.13,118.75) -- (99.33,118.75) -- cycle ;
+  %Shape: Rectangle [id:dp5085257977019034] 
+  \draw   (112,101) -- (151.33,101) -- (151.33,141) -- (112,141) -- cycle ;
+  %Shape: Rectangle [id:dp33001506333160935] 
+  \draw   (111,181) -- (150.33,181) -- (150.33,221) -- (111,221) -- cycle ;
+  %Right Arrow [id:dp5718992848093374] 
+  \draw   (132.92,150.33) -- (132.92,162.53) -- (134.67,162.53) -- (131.17,170.67) -- (127.67,162.53) -- (129.42,162.53) -- (129.42,150.33) -- cycle ;
+  %Right Arrow [id:dp6931270939254744] 
+  \draw   (100.33,202.25) -- (88.13,202.25) -- (88.13,204) -- (80,200.5) -- (88.13,197) -- (88.13,198.75) -- (100.33,198.75) -- cycle ;
+  %Shape: Rectangle [id:dp069718532513661] 
+  \draw   (32,181) -- (71.33,181) -- (71.33,221) -- (32,221) -- cycle ;
+
+    % Text Node
+  \draw (138,153) node [anchor=north west][inner sep=0.75pt]  {$\textcolor[rgb]{1,0,0}{U_{M}^{\dagger }( r)}$};                                     
+  % Text Node                                                                                                                                                           
+  \draw (73,178) node [anchor=north west][inner sep=0.75pt]  {$\textcolor[rgb]{1,0,0}{U}\textcolor[rgb]{1,0,0}{_{EM}^{\dagger }}\textcolor[rgb]{1,0,0}{(}\textcolor[rgb]{1,0,0}{r}\textcolor[rgb]{1,0,0}{)}$};                                                                                                                    
+  % Text Node                                                                                                                                                           
+  \draw (85,100) node [anchor=north west][inner sep=0.75pt] {$\textcolor[rgb]{1,0,0}{U^{\dagger }}$};                                              
+  % Text Node                                                                                                                                                           
+  \draw (36,109) node [anchor=north west][inner sep=0.75pt] [align=center] {{Kütle}\\{Bazı}};                                
+  % Text Node                                                                                                                                                           
+  \draw (117,109) node [anchor=north west][inner sep=0.75pt] [align=center] {{Çeşni}\\{Bazı}};                             
+  % Text Node                                                                                                                                                           
+  \draw (114,190) node [anchor=north west][inner sep=0.75pt]  [align=center] {{Madde}\\{Bazı}};                             
+  % Text Node                                                                                                                                                           
+  \draw (36,190) node [anchor=north west][inner sep=0.75pt] [align=center] {{Özbaz}};                              
+\end{tikzpicture}

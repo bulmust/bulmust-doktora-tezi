@@ -1,0 +1,31 @@
+\begin{tikzpicture}[font = \sansmath, scale=1.5]
+\coordinate (O) at (0,0,0);
+\coordinate (B) at (0,2,2);
+
+% ball background color
+\shade[ball color = green, opacity = 0.1] (0,0) circle [radius = 2cm];
+
+% Coordinate System
+\draw[thick,->] (0,0,0) -- (3,0,0) node[anchor=north east]{$y$};
+\draw[thick,->] (0,0,0) -- (0,3,0) node[anchor=north west]{$z$};
+\draw[thick,->] (0,0,0) -- (0,0,5) node[anchor=south]{$x$};
+
+% ellipse at center
+\draw[dashed, color=black, opacity = 0.3] (0,0) ellipse ({2} and {0.4});
+
+%draw a vector from origin to point (P) 
+\draw[thick,-stealth,color=red] (O) -- (B);
+
+%draw projection on xy plane, and a connecting line
+\draw[dashed, color=black] (B) -- (0,0,2);
+\draw[dashed, color=black] (B) -- (0,2,0);
+
+% Text
+\node[anchor=south east, color=red] at (0,2,2) {$\overrightarrow{B} $};
+
+%draw theta arc and label, using rotated coordinate system
+\draw[color = blue] (0cm,0.4cm) arc (90:120:0.4cm);
+% Text
+\node[anchor=south, color=blue] at (0,0.6,0.4) {$$\small $2\alpha$ $$};
+  
+\end{tikzpicture}

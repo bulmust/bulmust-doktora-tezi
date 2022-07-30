@@ -1,0 +1,226 @@
+\documentclass[a4paper,12pt,oneside]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[turkish, shorthands=off]{babel}
+\usepackage[left=4cm,top=2.5cm,right=2.5cm,bottom=2.5cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[unicode]{hyperref} %It generates warnings if you use $  $ (math mode)
+\usepackage{titlesec}
+\usepackage{tocloft}
+\usepackage[titletoc,title]{appendix}
+\usepackage{longtable}
+\usepackage{multirow} % For table
+\usepackage{tocbibind}
+% -----------------------------------------------------------------
+\usepackage{caption, graphicx, subcaption}
+\usepackage{tikz}
+% -----------------------------------------------------------------
+\usepackage{amsmath,amssymb,sansmath,bbold}
+\usepackage{physics}
+\usepackage{xcolor}
+\usepackage{pdfpages}
+% -----------------------------------------------------------------
+
+% Enable to Rotate
+\newcommand{\STAB}[1]{\begin{tabular}{@{}c@{}}#1\end{tabular}}
+
+% Configurations --------------------------------------------------
+\makeatletter
+\def\hlinewd#1{%
+	\noalign{\ifnum0=`}\fi\hrule \@height #1 \futurelet
+	\reserved@a\@xhline}
+\makeatother
+\nonstopmode
+\renewcommand\cftchapafterpnum{\vskip10pt} % Chapter spacing 
+%\setlength\cftbeforechapskip{3pt}
+% -----------------------------------------------------------------
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+% Overbar paranthesis %%%%%%%%%%%% \barparen
+\newcommand\barparen[1]{\overset{%
+   \scalebox{0.4}{$(\mkern-1mu-\mkern-1mu)$}}{#1}}
+\newcommand\barparenBig[1]{\overset{(-)}{#1}}
+
+% Define Turkish Titles -------------------------------------------
+\renewcommand*\contentsname{İÇİNDEKİLER}
+\renewcommand*\listfigurename{ŞEKİL LİSTESİ}
+\renewcommand*\listtablename{TABLO LİSTESİ}
+\renewcommand*\abstractname{ÖZET}
+\renewcommand*\bibname{KAYNAKLAR}
+\renewcommand*\appendix{EKLER}
+% -----------------------------------------------------------------
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Kapak 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{titlepage}
+	\centering
+	\setlength{\topmargin}{0cm}
+	\begin{Large}\bfseries
+	T.C.\par
+	MİMAR SİNAN GÜZEL SANATLAR ÜNİVERSİTESİ\par
+	FEN BİLİMLERİ ENSTİTÜSÜ\par
+	\end{Large}
+	\vspace{4.5cm}
+	\begin{large}\bfseries
+		KOLLEKTİF EVRİLEN NÖTRİNOLARIN ÇEŞNİ DÖNÜŞÜMÜ\par
+	\vspace{2cm}
+	DOKTORA TEZİ\par
+	\vspace{0.5cm}
+	İsmail Taygun BULMUŞ\par
+	\vspace{3cm}
+	Fizik Anabilim Dalı\par
+	\vspace{0.5cm}
+	Fizik Programı\par
+	\vspace{2cm}
+	Tez Danışmanı: Prof. Dr. Yamaç PEHLİVAN\par
+	\vspace{3cm}
+	HAZİRAN 2022\par
+	\end{large}
+	\vfill
+\end{titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Boş Sayfa
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\thispagestyle{empty}
+\mbox{}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Kapak 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{titlepage}
+	\centering
+	\setlength{\topmargin}{0cm}
+	\begin{Large}\bfseries
+	T.C.\par
+	MİMAR SİNAN GÜZEL SANATLAR ÜNİVERSİTESİ\par
+	FEN BİLİMLERİ ENSTİTÜSÜ\par
+	\end{Large}
+	\vspace{4.5cm}
+	\begin{large}\bfseries
+		KOLLEKTİF EVRİLEN NÖTRİNOLARIN ÇEŞNİ DÖNÜŞÜMÜ\par
+	\vspace{2cm}
+	DOKTORA TEZİ\par
+	\vspace{0.5cm}
+	İsmail Taygun BULMUŞ\par
+	\vspace{3cm}
+	Fizik Anabilim Dalı\par
+	\vspace{0.5cm}
+	Fizik Programı\par
+	\vspace{2cm}
+	Tez Danışmanı: Prof. Dr. Yamaç PEHLİVAN\par
+	\vspace{3cm}
+	HAZİRAN 2022\par
+	\end{large}
+	\vfill
+\end{titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Boş Sayfa
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\thispagestyle{empty}
+\mbox{}
+\newcommand{\blankpage}{
+\newpage
+\thispagestyle{empty}
+\mbox{}
+\newpage
+}
+\includepdf[pages=-]{islakImzaliKagitlar/IsmailTaygunBulmus_DoktoraTezi_ImzaKagidi.pdf}
+\newpage
+\includepdf[pages=-]{islakImzaliKagitlar/IsmailTaygunBulmus_EtikBeyanSayfasi_Imzali.pdf} 
+%\includegraphics{IsmailTaygunBulmus_DoktoraTezi_ImzaKagidi.pdf}
+\newpage
+
+% Configurations --------------------------------------------------
+\titleformat{\chapter}{\Large\bfseries}{\thechapter}{12pt}{}
+\titleformat{\section}{\large\bfseries}{\thesection}{12pt}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection}{12pt}{}
+\titleformat{\appendix}{\Large\bfseries}{\appendix}{12pt}{}
+\titleformat{\tableofcontents}{\Large\bfseries}{\tableofcontents}{12pt}{}
+\titleformat{\listoffigures}{\Large\bfseries}{\thelistoffigures}{12pt}{}
+%\titleformat{\listofsymbols}{\Large\bfseries}{\thelistoffigures}{14pt}{}
+\frontmatter
+% -----------------------------------------------------------------
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Özet
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{chapters/ozet.tex}
+\newpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Teşekkür
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{chapters/tesekkur.tex} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% İçindekiler
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\tableofcontents
+\cleardoublepage
+\phantomsection % For hyperref
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Tablo Listesi
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\renewcommand\cftlottitlefont{\Large \textbf}
+\listoftables
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Şekil Listesi
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\renewcommand\cftloftitlefont{\Large \textbf}
+\listoffigures
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Sembol Listesi
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{chapters/semboller.tex}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Kısaltma Listesi
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{chapters/kisaltmalar.tex}
+\newpage
+
+% Configurations --------------------------------------------------
+\mainmatter
+\pagestyle{plain}
+\setlength{\baselineskip}{1.5\baselineskip}
+% -----------------------------------------------------------------
+
+\input{chapters/ch1Giris.tex}
+\input{chapters/ch2NuKin.tex}
+\input{chapters/ch3Rezonanslar.tex}
+\input{chapters/ch4Simulasyonlar.tex}
+\input{chapters/ch5CekirdekSentez.tex}
+\input{chapters/ch6Sonuc.tex}
+
+%\addcontentsline{toc}{chapter}{KAYNAKLAR}
+\bibliographystyle{ieeetr}
+\bibliography{taygunTezKaynaklar}	
+
+\input{chapters/app1Bloch.tex}
+
+\newpage
+%\chapter{SONUÇ}
+\includepdf[pages=-]{islakImzaliKagitlar/IsmailTaygunBulmus_CV_EN.pdf} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Boş Sayfa
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\thispagestyle{empty}
+\mbox{}
+\newpage
+
+\end{document}
